@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://harshitbaranwal609_db_user:gy2XzQay2FNYmMwr@cluster0.ksojhmj.mongodb.net/",
+      process.env.MONGO_URI,
       {
         dbName: "Nextjs_Auth_App",
       }
